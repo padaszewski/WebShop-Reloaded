@@ -10,3 +10,4 @@ Steps to create:
 6. index.html: Added bootstraps starter template
 7. added pictures to index
 8. changed size of images in folder 'img'
+9. Additional styles added
