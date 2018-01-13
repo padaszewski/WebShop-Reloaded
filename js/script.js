@@ -3,12 +3,13 @@ simpleCart({
         // see the cart columns documentation
         cartColumns: [
         { attr: "name", label: "Produkt"},
+        { view:'image' , attr:'thumb', label: false},
         { view: "currency", attr: "price", label: "Preis"},
-        { view: "decrement", label: false},
+        { view: "decrement", label: false, text: '<span class="glyphicon glyphicon-minus"></span>'},
         { attr: "quantity", label: "Anzahl"},
-        { view: "increment", label: false},
+        { view: "increment", label: false, text: '<span class="glyphicon glyphicon-plus"></span>'},
         { view: "currency", attr: "total", label: "Gesamt" },
-        { view: "remove", text: "Remove", label: false}
+        { view: "remove", text: '<span class="glyphicon glyphicon-trash"></span>', label: false}
         ],
         // "div" or "table" - builds the cart as a 
         // table or collection of divs
@@ -32,7 +33,19 @@ simpleCart({
         // sent to checkout
         excludeFromCheckout: [],
         // custom function to add shipping cost
-        shippingCustom: null,
+        
+        shippingCustom: function(){ 
+
+            if( simpleCart.quantity() > 3 ){
+              
+              return 0;
+            } 
+            else {
+            
+            return 10;
+          }
+        },
+
         // flat rate shipping option
         shippingFlatRate: 0,
         // added shipping based on this value 
@@ -58,3 +71,27 @@ simpleCart({
         beforeCheckout        : null,
         beforeRemove           : null
     });
+
+simpleCart.bind( "afterAdd" , function(){
+
+    $(".warenkorb").fadeOut(500).fadeIn(500);
+});
+
+simpleCart.bind( 'update' , function(){
+
+    if(simpleCart.quantity() == 0){
+
+        $( ".hideIfEmpty").hide();
+        $( ".showIfEmpty").show();
+    }
+    else{
+
+        $( ".hideIfEmpty").show();
+        $( ".showIfEmpty").hide();
+    }
+});
+
+$(function(){
+  
+  $('#Container').mixItUp();
+});

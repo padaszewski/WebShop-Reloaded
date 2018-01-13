@@ -1,16 +1,39 @@
-.item{
+body
+{
+	background-color: #444;
+}
+
+.container
+{
+	background-color: white;
+}
+
+.item
+{
 	padding: 20px;
 	transition: all .5s;
 }
 
-.item:hover{
-
-	transform: scale(1.1);
+.item:hover
+{
+	transform: scale(1.05);
 	box-shadow: 0 0 20px #666;
-	background-color: white;
+	background-color: #E5E5E5;
 }
 
-body{
-
-	background-color: white;
+.simpleCart_items img
+{
+	max-width: 64px;
+	max-height: 64px;
 }
+
+.item-quantity, .item-increment, .item-decrement, .item-total, .table-striped, .item_Quantity
+{
+	text-align: center;
+}
+
+.container .mix
+{
+	display: none;
+}
+

@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -16,24 +16,24 @@
     <!--[if lt IE 9]>
     <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<![endif]-->
 
 </head>
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="row">
+        <div class="row">
 
-        <div class="col-sm-12">
+            <div class="col-sm-12">
 
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
 
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                data-target="#bs-example-navbar-collapse-1">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -46,65 +46,95 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#" data-toggle="modal" data-target="#myModal">Warenkorb</a></li>
+                            <li class="warenkorb"><a href="#" data-toggle="modal" data-target="#myModal">Warenkorb (<span class="simpleCart_quantity"></span>) </a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
 
                 </div><!-- /.container-fluid -->
             </nav>
 
+            <label>Hersteller:</label>
+
+            <div class="controls btn-group">
+
+              <button class="filter btn btn-sm btn-default" data-filter="all">All</button>
+              <button class="filter btn btn-sm btn-default" data-filter=".Apple">Apple</button>
+              <button class="filter btn btn-sm btn-default" data-filter=".Huawei">Huawei</button>
+              <button class="filter btn btn-sm btn-default" data-filter=".Samsung">Samsung</button>
+              <button class="filter btn btn-sm btn-default" data-filter=".LG">LG</button>
+
+          </div>
+
+          <div class="pull-right">
+
+            <label>Preis:</label>
+
+            <div class="controls btn-group">
+
+                <button class="sort btn btn-sm btn-default" data-sort="price:asc">Aufsteigend</button>
+                <button class="sort btn btn-sm btn-default" data-sort="price:desc">Absteigend</button>
+
+            </div>
         </div>
 
     </div>
+
+    <p>&nbsp;</p></div>
+
+</div>
 
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Warenkorb <span class="showIfEmpty">ist leer :(</span></h4>
             </div>
-            <div class="modal-body">
-                <div class="simpleCart_items"></div>
+            
+            <div class="hideIfEmpty">
 
-                <table class="table table-striped">
+                <div class="modal-body">
+                    <div class="simpleCart_items"></div>
 
-                    <thead>
-                    <tr>
-                        <th>Zusammenkosten</th>
-                        <th>Lieferungskosten</th>
-                        <th>Zum Bezahlen</th>
-                    </tr>
-                    </thead>
+                    <table class="table table-striped">
 
-                    <tbody>
-                    <td>
-                        <div class="simpleCart_total"></div>
-                    </td>
-                    <td>
-                        <div class="simpleCart_shipping"></div>
-                    </td>
-                    <td>
-                        <div class="simpleCart_grandTotal"></div>
-                    </td>
-                    </tbody>
+                        <thead>
+                            <tr>
+                                <th>Zusammenkosten</th>
+                                <th>Lieferungskosten</th>
+                                <th>Zum Bezahlen</th>
+                            </tr>
+                        </thead>
 
-                </table>
+                        <tbody>
+                            <td>
+                                <div class="simpleCart_total"></div>
+                            </td>
+                            <td>
+                                <div class="simpleCart_shipping"></div>
+                            </td>
+                            <td>
+                                <div class="simpleCart_grandTotal"></div>
+                            </td>
+                        </tbody>
+
+                    </table>
 
 
-            </div>
-            <div class="modal-footer">
+                </div>
+                
+                <div class="modal-footer">
 
-                <!-- create a checkout button -->
-                <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Złóż zamówienie |</a>
-                <!-- button to empty the cart -->
-                <a href="javascript:;" class="simpleCart_empty btn btn-default"> Opróżnij koszyk</a>
+                    <!-- create a checkout button -->
+                    <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Złóż zamówienie</a>
+                    <!-- button to empty the cart -->
+                    <a href="javascript:;" class="simpleCart_empty btn btn-default">Opróżnij koszyk</a>
 
-                <button type="button" data-dismiss="modal">Checkout</button>
+                </div>
 
             </div>
         </div>
@@ -112,11 +142,11 @@
 </div>
 
 
-<div class="container">
+<div id="Container" class="container">
 
     <div class="row">
 
-        <div class="col-md-4 item text-center">
+        <div class="col-md-4 item text-center mix Huawei" data-price="429">
 
             <div class="simpleCart_shelfItem">
 
@@ -125,7 +155,7 @@
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <img src="img/huawei-p10.png" alt="">
+                        <img class="item_thumb" src="img/huawei-p10.png" alt="">
 
                     </div>
                 </div>
@@ -133,7 +163,7 @@
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <h2 class="item_price">35.99 €</h2>
+                        <h2 class="item_price">429 €</h2>
                     </div>
 
                 </div>
@@ -159,16 +189,16 @@
         </div> <!-- col-md-4 -->
 
 
-        <div class="col-md-4 item text-center">
+        <div class="col-md-4 item text-center mix Apple"  data-price="689">
 
             <div class="simpleCart_shelfItem">
 
-                <h2 class="item_name">iPhone 7+</h2>
+                <h2 class="item_name">Apple iPhone 7+</h2>
 
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <img src="img/iphone-7plus-black.png" alt="">
+                        <img class="item_thumb" src="img/iphone-7plus-black.png" alt="">
 
                     </div>
                 </div>
@@ -176,7 +206,7 @@
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <h2 class="item_price">55.99 €</h2>
+                        <h2 class="item_price">689 €</h2>
                     </div>
 
                 </div>
@@ -201,23 +231,23 @@
 
         </div> <!-- col-md-4 -->
 
-        <div class="col-md-4 item text-center">
+        <div class="col-md-4 item text-center mix Apple" data-price="1099">
 
             <div class="simpleCart_shelfItem">
 
-                <h2 class="item_name">iPhone X</h2>
+                <h2 class="item_name">Apple iPhone X</h2>
 
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <img src="img/iphone-x.png" alt="">
+                        <img class="item_thumb" src="img/iphone-x.png" alt="">
                     </div>
                 </div>
 
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <h2 class="item_price">66.99 €</h2>
+                        <h2 class="item_price">1099 €</h2>
                     </div>
 
                 </div>
@@ -242,11 +272,7 @@
 
         </div> <!-- col-md-4 -->
 
-    </div>  <!-- /row -->
-
-    <div class="row">
-
-        <div class="col-md-4 item text-center">
+        <div class="col-md-4 item text-center mix LG" data-price="399">
 
             <div class="simpleCart_shelfItem">
 
@@ -255,14 +281,14 @@
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <img src="img/lg-g6.png" alt="">
+                        <img class="item_thumb" src="img/lg-g6.png" alt="">
                     </div>
                 </div>
 
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <h2 class="item_price">77.99 €</h2>
+                        <h2 class="item_price">399 €</h2>
                     </div>
 
                 </div>
@@ -287,23 +313,23 @@
 
         </div> <!-- col-md-4 -->
 
-        <div class="col-md-4 item text-center">
+        <div class="col-md-4 item text-center mix Samsung" data-price="849">
 
             <div class="simpleCart_shelfItem">
 
-                <h2 class="item_name">Samsung Galaxy Note 7</h2>
+                <h2 class="item_name">Samsung Galaxy Note 8</h2>
 
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <img src="img/samsung-galaxy-note-7.png" alt="">
+                        <img class="item_thumb" src="img/samsung-galaxy-note-7.png" alt="">
                     </div>
                 </div>
 
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <h2 class="item_price">88.99 €</h2>
+                        <h2 class="item_price">849 €</h2>
                     </div>
 
                 </div>
@@ -328,7 +354,7 @@
 
         </div> <!-- col-md-4 -->
 
-        <div class="col-md-4 item text-center">
+        <div class="col-md-4 item text-center mix Samsung" data-price="639">
 
             <div class="simpleCart_shelfItem">
 
@@ -337,14 +363,14 @@
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <img src="img/samsung-galaxy-s8-lis.png" alt="">
+                        <img class="item_thumb" src="img/samsung-galaxy-s8-lis.png" alt="">
                     </div>
                 </div>
 
                 <div class="row">
 
                     <div class="col-xs-12">
-                        <h2 class="item_price">99.99 €</h2>
+                        <h2 class="item_price">639 €</h2>
                     </div>
 
                 </div>
@@ -371,17 +397,23 @@
 
     </div> <!-- /row -->
 
+    <div class="gap"></div>
+    <div class="gap"></div>
+
 </div> <!-- /container -->
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous"></script>
+
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
 
 <script src="js/simpleCart.js"></script>
 <script src="js/script.js"></script>

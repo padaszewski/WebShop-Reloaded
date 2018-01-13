@@ -15,3 +15,4 @@ Steps to create:
 11. Products description added
 12. 'Basket' added
 13. 'Basket v1.1' aktualisation
+14. Filter ready
