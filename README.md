@@ -13,3 +13,4 @@ Steps to create:
 9. Additional styles added
 10. simpleCart.js added, configuration
 11. Products description added
+12. 'Basket' added

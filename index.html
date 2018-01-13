@@ -23,6 +23,24 @@
 
     <div class="simpleCart_items"></div>
 
+    <table class="table table-striped">
+        
+        <thead>
+               <tr>
+                   <th>Zusammenkosten</th>
+                   <th>Lieferungskosten</th>
+                   <th>Zum Bezahlen</th>
+               </tr>
+        </thead>
+        
+        <tbody>
+            <td><div class="simpleCart_total"></div></td>
+            <td><div class="simpleCart_shipping"></div></td>
+            <td><div class="simpleCart_grandTotal"></div></td>
+        </tbody>
+    
+    </table>
+
     <!-- create a checkout button -->
     <a href="javascript:;" class="simpleCart_checkout">Złóż zamówienie |</a>
     <!-- button to empty the cart -->
@@ -304,14 +322,7 @@
     crossorigin="anonymous"></script>
 
     <script src="js/simpleCart.js"></script>
-
-    <script>
-      simpleCart({
-        checkout: {
-          type: "PayPal",
-          email: "you@yours.com"
-      }
-  });
-</script>
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
