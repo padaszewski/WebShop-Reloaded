@@ -6,3 +6,4 @@ Steps to create:
 2. Initial commit
 3. Added lachaczek as a contributor
 4. Added readme.md and images to the repo
+5. Added styles.css and script.js
