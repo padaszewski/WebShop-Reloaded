@@ -7,3 +7,4 @@ Steps to create:
 3. Added lachaczek as a contributor
 4. Added readme.md and images to the repo
 5. Added styles.css and script.js
+6. index.html: Added bootstraps starter template
