@@ -9,3 +9,4 @@ Steps to create:
 5. Added styles.css and script.js
 6. index.html: Added bootstraps starter template
 7. added pictures to index
+8. changed size of images in folder 'img'
