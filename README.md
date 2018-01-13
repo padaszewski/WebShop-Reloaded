@@ -16,3 +16,4 @@ Steps to create:
 12. 'Basket' added
 13. 'Basket v1.1' aktualisation
 14. Filter ready
+15. Full German Version
