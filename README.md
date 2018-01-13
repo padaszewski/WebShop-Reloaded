@@ -8,3 +8,4 @@ Steps to create:
 4. Added readme.md and images to the repo
 5. Added styles.css and script.js
 6. index.html: Added bootstraps starter template
+7. added pictures to index
