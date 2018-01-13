@@ -21,308 +21,362 @@
 </head>
 <body>
 
-    <div class="simpleCart_items"></div>
-
-    <table class="table table-striped">
-        
-        <thead>
-               <tr>
-                   <th>Zusammenkosten</th>
-                   <th>Lieferungskosten</th>
-                   <th>Zum Bezahlen</th>
-               </tr>
-        </thead>
-        
-        <tbody>
-            <td><div class="simpleCart_total"></div></td>
-            <td><div class="simpleCart_shipping"></div></td>
-            <td><div class="simpleCart_grandTotal"></div></td>
-        </tbody>
-    
-    </table>
-
-    <!-- create a checkout button -->
-    <a href="javascript:;" class="simpleCart_checkout">Złóż zamówienie |</a>
-    <!-- button to empty the cart -->
-    <a href="javascript:;" class="simpleCart_empty"> Opróżnij koszyk</a>
-
-    
-
-    
-
     <div class="container">
 
         <div class="row">
 
-            <div class="col-md-4 item text-center">
-                
-                <div class="simpleCart_shelfItem">
-                    
-                    <h2 class="item_name"> Huawei P10 </h2>
-                   
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <img src="img/huawei-p10.png" alt="">
-                    
-                        </div>
+            <div class="col-sm-12">
+
+                <nav class="navbar navbar-default" role="navigation">
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="navbar-brand" href="#">Phones WebShop</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">Warenkorb</a></li>
+                        </ul>    
+                    </div><!-- /.navbar-collapse -->
+
+                </div><!-- /.container-fluid -->
+            </nav>
+
+        </div>
+        
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+    </div>
+    <div class="modal-body">
+        <div class="simpleCart_items"></div>
+
+        <table class="table table-striped">
+
+            <thead>
+             <tr>
+                 <th>Zusammenkosten</th>
+                 <th>Lieferungskosten</th>
+                 <th>Zum Bezahlen</th>
+             </tr>
+         </thead>
+
+         <tbody>
+            <td><div class="simpleCart_total"></div></td>
+            <td><div class="simpleCart_shipping"></div></td>
+            <td><div class="simpleCart_grandTotal"></div></td>
+        </tbody>
+
+    </table>
+
+
+</div>
+<div class="modal-footer">
+
+    <!-- create a checkout button -->
+    <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Złóż zamówienie |</a>
+    <!-- button to empty the cart -->
+    <a href="javascript:;" class="simpleCart_empty btn btn-default"> Opróżnij koszyk</a>
+
+    <button type="button" data-dismiss="modal">Checkout</button>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-4 item text-center">
+
+            <div class="simpleCart_shelfItem">
+
+                <h2 class="item_name"> Huawei P10 </h2>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <img src="img/huawei-p10.png" alt="">
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <h2 class="item_price">35.99 €</h2>
                     </div>
                     
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <h2 class="item_price">35.99 €</h2>
-                        </div>
-                    
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-4">
+
+                    </div>
+
+                    <div class="col-xs-4">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
+                    </div>
+
+                    <div class="col-xs-4">
+                        <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
+                    </div>
+
+                </div> <!-- /row -->
+
+            </div> <!-- col-md-4 item text-center -->
+
+        </div> <!-- col-md-4 -->
+
+
+        <div class="col-md-4 item text-center">
+
+            <div class="simpleCart_shelfItem">
+
+                <h2 class="item_name">iPhone 7+</h2>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <img src="img/iphone-7plus-black.png" alt="">
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <h2 class="item_price">55.99 €</h2>
                     </div>
                     
-                    <div class="row">
+                </div>
 
-                        <div class="col-xs-4">
+                <div class="row">
 
-                        </div>
+                    <div class="col-xs-4">
 
-                        <div class="col-xs-4">
-                            <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
-                        </div>
+                    </div>
 
-                        <div class="col-xs-4">
-                            <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
-                        </div>
+                    <div class="col-xs-4">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
+                    </div>
 
-                    </div> <!-- /row -->
+                    <div class="col-xs-4">
+                        <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
+                    </div>
 
-                </div> <!-- col-md-4 item text-center -->
+                </div> <!-- /row -->
 
-            </div> <!-- col-md-4 -->
+            </div> <!-- col-md-4 item text-center -->
 
+        </div> <!-- col-md-4 -->
 
-            <div class="col-md-4 item text-center">
-                
-                <div class="simpleCart_shelfItem">
-                    
-                    <h2 class="item_name">iPhone 7+</h2>
-                   
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <img src="img/iphone-7plus-black.png" alt="">
-                    
-                        </div>
+        <div class="col-md-4 item text-center">
+
+            <div class="simpleCart_shelfItem">
+
+                <h2 class="item_name">iPhone X</h2>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <img src="img/iphone-x.png" alt="">                    
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <h2 class="item_price">66.99 €</h2>
                     </div>
                     
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <h2 class="item_price">55.99 €</h2>
-                        </div>
-                    
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-4">
+
+                    </div>
+
+                    <div class="col-xs-4">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
+                    </div>
+
+                    <div class="col-xs-4">
+                        <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
+                    </div>
+
+                </div> <!-- /row -->
+
+            </div> <!-- col-md-4 item text-center -->
+
+        </div> <!-- col-md-4 -->
+
+    </div>  <!-- /row -->
+
+    <div class="row">
+
+        <div class="col-md-4 item text-center">
+
+            <div class="simpleCart_shelfItem">
+
+                <h2 class="item_name">LG G6</h2>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <img src="img/lg-g6.png" alt="">                    
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <h2 class="item_price">77.99 €</h2>
                     </div>
                     
-                    <div class="row">
+                </div>
 
-                        <div class="col-xs-4">
+                <div class="row">
 
-                        </div>
+                    <div class="col-xs-4">
 
-                        <div class="col-xs-4">
-                            <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
-                        </div>
+                    </div>
 
-                        <div class="col-xs-4">
-                            <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
-                        </div>
+                    <div class="col-xs-4">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
+                    </div>
 
-                    </div> <!-- /row -->
+                    <div class="col-xs-4">
+                        <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
+                    </div>
 
-                </div> <!-- col-md-4 item text-center -->
+                </div> <!-- /row -->
 
-            </div> <!-- col-md-4 -->
+            </div> <!-- col-md-4 item text-center -->
 
-            <div class="col-md-4 item text-center">
-                
-                <div class="simpleCart_shelfItem">
-                    
-                    <h2 class="item_name">iPhone X</h2>
-                   
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <img src="img/iphone-x.png" alt="">                    
-                        </div>
+        </div> <!-- col-md-4 -->
+
+        <div class="col-md-4 item text-center">
+
+            <div class="simpleCart_shelfItem">
+
+                <h2 class="item_name">Samsung Galaxy Note 7</h2>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <img src="img/samsung-galaxy-note-7.png" alt="">                    
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <h2 class="item_price">88.99 €</h2>
                     </div>
                     
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <h2 class="item_price">66.99 €</h2>
-                        </div>
-                    
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-4">
+
+                    </div>
+
+                    <div class="col-xs-4">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
+                    </div>
+
+                    <div class="col-xs-4">
+                        <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
+                    </div>
+
+                </div> <!-- /row -->
+
+            </div> <!-- col-md-4 item text-center -->
+
+        </div> <!-- col-md-4 -->
+
+        <div class="col-md-4 item text-center">
+
+            <div class="simpleCart_shelfItem">
+
+                <h2 class="item_name">Samsung Galaxy S8+</h2>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <img src="img/samsung-galaxy-s8-lis.png" alt="">
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <h2 class="item_price">99.99 €</h2>
                     </div>
                     
-                    <div class="row">
+                </div>
 
-                        <div class="col-xs-4">
+                <div class="row">
 
-                        </div>
+                    <div class="col-xs-4">
 
-                        <div class="col-xs-4">
-                            <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
-                        </div>
-
-                        <div class="col-xs-4">
-                            <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
-                        </div>
-
-                    </div> <!-- /row -->
-
-                </div> <!-- col-md-4 item text-center -->
-
-            </div> <!-- col-md-4 -->
-
-        </div>  <!-- /row -->
-
-        <div class="row">
-
-            <div class="col-md-4 item text-center">
-                
-                <div class="simpleCart_shelfItem">
-                    
-                    <h2 class="item_name">LG G6</h2>
-                   
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <img src="img/lg-g6.png" alt="">                    
-                        </div>
                     </div>
-                    
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <h2 class="item_price">77.99 €</h2>
-                        </div>
-                    
+
+                    <div class="col-xs-4">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
                     </div>
-                    
-                    <div class="row">
 
-                        <div class="col-xs-4">
-
-                        </div>
-
-                        <div class="col-xs-4">
-                            <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
-                        </div>
-
-                        <div class="col-xs-4">
-                            <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
-                        </div>
-
-                    </div> <!-- /row -->
-
-                </div> <!-- col-md-4 item text-center -->
-
-            </div> <!-- col-md-4 -->
-
-            <div class="col-md-4 item text-center">
-                
-                <div class="simpleCart_shelfItem">
-                    
-                    <h2 class="item_name">Samsung Galaxy Note 7</h2>
-                   
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <img src="img/samsung-galaxy-note-7.png" alt="">                    
-                        </div>
+                    <div class="col-xs-4">
+                        <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
                     </div>
-                    
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <h2 class="item_price">88.99 €</h2>
-                        </div>
-                    
-                    </div>
-                    
-                    <div class="row">
 
-                        <div class="col-xs-4">
+                </div> <!-- /row -->
 
-                        </div>
+            </div> <!-- col-md-4 item text-center -->
 
-                        <div class="col-xs-4">
-                            <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
-                        </div>
+        </div> <!-- col-md-4 -->
 
-                        <div class="col-xs-4">
-                            <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
-                        </div>
+    </div> <!-- /row -->
 
-                    </div> <!-- /row -->
-
-                </div> <!-- col-md-4 item text-center -->
-
-            </div> <!-- col-md-4 -->
-
-            <div class="col-md-4 item text-center">
-                
-                <div class="simpleCart_shelfItem">
-                    
-                    <h2 class="item_name">Samsung Galaxy S8+</h2>
-                   
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <img src="img/samsung-galaxy-s8-lis.png" alt="">
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                    
-                        <div class="col-xs-12">
-                            <h2 class="item_price">99.99 €</h2>
-                        </div>
-                    
-                    </div>
-                    
-                    <div class="row">
-
-                        <div class="col-xs-4">
-
-                        </div>
-
-                        <div class="col-xs-4">
-                            <input type="text" value="1" class="item_Quantity form-control" placeholder="Anzahl">
-                        </div>
-
-                        <div class="col-xs-4">
-                            <a class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a>
-                        </div>
-
-                    </div> <!-- /row -->
-
-                </div> <!-- col-md-4 item text-center -->
-
-            </div> <!-- col-md-4 -->
-
-        </div> <!-- /row -->
-
-    </div> <!-- /container -->
+</div> <!-- /container -->
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous"></script>
 
-    <script src="js/simpleCart.js"></script>
-    <script src="js/script.js"></script>
-    
+<script src="js/simpleCart.js"></script>
+<script src="js/script.js"></script>
+
 </body>
 </html>
