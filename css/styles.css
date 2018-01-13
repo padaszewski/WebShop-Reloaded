@@ -37,3 +37,8 @@ body
 	display: none;
 }
 
+.glyphicon-shopping-cart, .simpleCart_quantity
+{
+	font-size: 150%;
+}
+
