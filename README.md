@@ -11,3 +11,4 @@ Steps to create:
 7. added pictures to index
 8. changed size of images in folder 'img'
 9. Additional styles added
+10. simpleCart.js added, configuration
