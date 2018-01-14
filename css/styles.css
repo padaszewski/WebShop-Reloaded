@@ -1,11 +1,28 @@
 body
 {
-	background-color: #444;
+	background-color: #888888;
 }
 
 .container
 {
 	background-color: white;
+}
+
+#Container
+{
+	border: 3px solid white;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	margin-bottom: 15px;
+}
+
+#jeden
+{
+	border: 3px solid white;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin-top: 15px;
+	padding-top: 15px;
 }
 
 .item
@@ -18,7 +35,7 @@ body
 {
 	transform: scale(1.05);
 	box-shadow: 0 0 20px #666;
-	background-color: #E5E5E5;
+	background-color: #d4d4d4;
 }
 
 .simpleCart_items img
@@ -42,3 +59,9 @@ body
 	font-size: 150%;
 }
 
+.navbar_Brand_Label
+{
+	color: #777;
+	font-family: "Times New Roman", Times, serif;
+	font-style: oblique;
+}

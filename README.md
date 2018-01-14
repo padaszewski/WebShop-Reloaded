@@ -17,3 +17,4 @@ Steps to create:
 13. 'Basket v1.1' aktualisation
 14. Filter ready
 15. Full German Version
+16. 'Phones WebShop v1.0' ready
